@@ -1,0 +1,28 @@
+# PythonCodes
+import turtle
+import math
+
+# MULTIPLE STAR:
+bob = turtle.Turtle()
+bob.color('yellow','white')
+bob.getscreen().bgcolor('black')
+bob.speed(100)
+bob.penup()
+bob.goto(-200,100)
+bob.pendown()
+
+def star(turtle,size):
+    if size <=10:
+        return
+    else:
+        bob.begin_fill()
+        for i in range(5):
+            turtle.forward(size)
+            turtle.right(144)
+            star(bob,size/4)
+        bob.end_fill()
+
+star(bob,300)
+bob.heading()
+turtle.done()
+
